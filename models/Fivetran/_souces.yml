@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: source_1
+    schema: JSON_DATA
+    database: FIVETRAN
+    description: raw json data
+    freshness:
+      warn_after:
+        count: 24
+        period: hour
+    tables:
+      - name: raw
+        description: One record per person who has purchased one or more items
+      

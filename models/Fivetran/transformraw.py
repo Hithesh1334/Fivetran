@@ -5,7 +5,7 @@ def model(dbt, session):
     # Load the source data
     raw_json_df = dbt.source("source_1", "raw").to_pandas()
 
-    json_str = raw_json_df['_DATA'].iloc[0]
+    json_str = raw_json_df['DATA'].iloc[0]
    
     json_data = json.loads(json_str)
     data_records = json_data['data']

@@ -1,2 +1,2 @@
 
-select _data from {{source('source_1', 'raw')}}
+select data from {{source('source_1', 'raw')}}

@@ -15,7 +15,7 @@ def model(dbt, session):
     column_names = [col['name'] for col in json_data['meta']['view']['columns']]
     df.columns = column_names  # Set the DataFrame column names
 
-    aggregated_insights = df.groupby(['age years', 'sex'])['COVID-19 Deaths'].sum().reset_index()
+    aggregated_insights = df.groupby(['Age Years', 'Sex'])['Total Deaths'].sum().reset_index()
     
     # Define a new view name
     view_name = 'covid_death_insights_view'

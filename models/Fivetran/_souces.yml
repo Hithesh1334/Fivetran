@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: source_1
-    schema: GOOGLE_DRIVE_JSON
+    schema: JSON_DATA_2
     database: FIVETRAN
     description: raw json data
     freshness:

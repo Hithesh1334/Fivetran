@@ -12,4 +12,16 @@ sources:
     tables:
       - name: raw
         description: One record per person who has purchased one or more items
+
+  - name: source_2
+    schema: TEST
+    database: FIVETRAN
+    description: raw json data
+    freshness:
+      warn_after:
+        count: 24
+        period: hour
+    tables:
+      - name: TRANSFORMRAW
+        description: tranfrom
       
